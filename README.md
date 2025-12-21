@@ -1,24 +1,32 @@
 # ⚡ EV Charging Station Booking System (Angular)
 
-A beginner-friendly frontend web application built using **Angular** that allows users to book EV charging slots easily.
+A beginner-friendly frontend web application built using **Angular** that allows users to easily book EV charging slots.
 
-## 🚀 Features
-- View EV charging stations
-- Select charging stations
-- Choose available charging slots
-- Booking details page
-- Payment page
-- Booking confirmation page
+## 🚀 Project Overview
+This web app allows users to:
+- View EV charging stations nearby
+- Select a station and available charging slots
+- Enter booking details
+- Complete payment
+- View booking confirmation
+
+### Role & Responsibility
+- Built the entire frontend using Angular
+- Implemented routing between multiple pages
+- Added slot selection and booking flow
+- Designed responsive UI
 
 ## 🛠 Tech Stack
-- Angular
+- Angular 16
 - TypeScript
-- HTML
-- CSS
+- HTML5 & CSS3
+
 ## 📸 Screenshots
 
 ### Home Page
 ![Home Page](screenshots/home.png)
+![Home Page](screenshots/home a.png)
+![Home Page](screenshots/home b.png)
 
 ### Select Station
 ![Select Station](screenshots/select-station.png)
@@ -44,8 +52,10 @@ A beginner-friendly frontend web application built using **Angular** that allows
 ### Downloaded Invoice
 ![Downloaded Invoice](screenshots/downloaded_invoice.png)
 
-
-## ▶ How to Run the Project
+## ▶ How to Run
 ```bash
 npm install
 ng serve
+
+
+👩‍💻 Developer: Sandhiyaa M
