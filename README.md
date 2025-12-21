@@ -25,8 +25,8 @@ This web app allows users to:
 
 ### Home Page
 ![Home Page](screenshots/home.png)
-![Home Page](screenshots/home a.png)
-![Home Page](screenshots/home b.png)
+![Home Page](screenshots/home-a.png)
+![Home Page](screenshots/home-b.png)
 
 ### Select Station
 ![Select Station](screenshots/select-station.png)
