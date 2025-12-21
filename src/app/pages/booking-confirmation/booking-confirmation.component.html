@@ -1,0 +1,85 @@
+<div class="confirm-page">
+
+  <!-- Success Header -->
+  <div class="success-header">
+    <div class="check-circle">✔</div>
+    <h1>Booking Confirmed</h1>
+    <p>Your EV charging slot has been successfully booked</p>
+  </div>
+
+  <!-- Booking Meta -->
+  <div class="meta-card">
+    <div>
+      <span class="label">Booking ID</span>
+      <strong>{{ bookingId }}</strong>
+    </div>
+    <div>
+      <span class="label">Booked On</span>
+      <strong>{{ bookedDate }}</strong>
+    </div>
+  </div>
+
+  <!-- Station Card -->
+  <div class="card">
+    <h3>Charging Station</h3>
+    <p class="station-name">{{ station.name }}</p>
+    <p class="address">{{ station.address }}</p>
+  </div>
+
+  <!-- Slot Info -->
+  <div class="card grid-3">
+    <div>
+      <span class="label">Slot</span>
+      <strong>{{ slot.time }}</strong>
+    </div>
+    <div>
+      <span class="label">Duration</span>
+      <strong>{{ duration.label }}</strong>
+    </div>
+    <div>
+      <span class="label">Amount Paid</span>
+      <strong class="green">₹{{ totalAmount }}</strong>
+    </div>
+  </div>
+
+  <!-- Price Breakdown -->
+  <div class="card">
+    <h3>Payment Summary</h3>
+
+    <div class="row">
+      <span>Subtotal</span>
+      <span>₹{{ subtotal }}</span>
+    </div>
+    <div class="row">
+      <span>Tax</span>
+      <span>₹{{ tax }}</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row total">
+      <span>Total</span>
+      <span>₹{{ totalAmount }}</span>
+    </div>
+  </div>
+
+  <!-- Payment Status -->
+  <div class="payment-status">
+    <div>
+      <span class="label">Payment Method</span>
+      <strong>{{ paymentMethod | uppercase }}</strong>
+    </div>
+    <span class="badge">PAID</span>
+  </div>
+
+  <!-- Actions -->
+  <div class="action-bar">
+    <button class="secondary" (click)="downloadInvoice()">
+      Download Invoice
+    </button>
+    <button class="primary" (click)="goToHome()">
+      Go to Home
+    </button>
+  </div>
+
+</div>

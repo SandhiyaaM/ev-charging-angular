@@ -1,0 +1,158 @@
+/* Page */
+.confirm-page {
+  max-width: 440px;
+  margin: auto;
+  padding: 24px 16px 40px;
+  background: #c5d2cb;
+  min-height: 100vh;
+}
+
+/* Success Header */
+.success-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.check-circle {
+  width: 64px;
+  height: 64px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.success-header h1 {
+  margin: 14px 0 6px;
+  font-size: 22px;
+}
+
+.success-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Meta Card */
+.meta-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Station */
+.station-name {
+  font-weight: 600;
+}
+
+.address {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 10px;
+}
+
+/* Labels */
+.label {
+  font-size: 12px;
+  color: #64748b;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 12px 0;
+}
+
+.total {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.green {
+  color: #16a34a;
+}
+
+/* Payment Status */
+.payment-status {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Actions */
+.action-bar {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #16a34a;
+  color: white;
+  border: none;
+}
+
+.secondary {
+  background: rgb(32, 70, 30);
+  border: 1px solid #16a34a;
+  color: #f2f5f3;
+}

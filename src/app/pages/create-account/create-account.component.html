@@ -1,0 +1,51 @@
+<form class="card" [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+
+  <!-- Logo -->
+  <div class="logo-wrapper">
+    <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+  </div>
+<h2 class="title">Create Your Account</h2>
+<p class="subtitle">Enter your personal details</p>
+
+
+  <!-- Full Name -->
+  <div class="input-group">
+    <i class="fa-solid fa-user"></i>
+    <input type="text" formControlName="name" placeholder="Full Name">
+  </div>
+
+  <!-- Mobile -->
+  <div class="input-group">
+    <i class="fa-solid fa-phone"></i>
+    <input type="text" formControlName="mobile" placeholder="Mobile Number">
+  </div>
+
+  <!-- Email -->
+  <div class="input-group">
+    <i class="fa-solid fa-envelope"></i>
+    <input type="email" formControlName="email" placeholder="Email Address">
+  </div>
+
+  <!-- Location -->
+  <div class="input-group">
+    <i class="fa-solid fa-location-dot"></i>
+    <input type="text" formControlName="location" placeholder="Location">
+  </div>
+
+  <!-- Buttons -->
+  <div class="actions">
+    <button type="button" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </button>
+
+    <button type="submit" class="next-btn" [disabled]="accountForm.invalid">
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <p class="login-link">
+    Already have an account?
+    <a routerLink="/login">Login here</a>
+  </p>
+
+</form>

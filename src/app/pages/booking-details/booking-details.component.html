@@ -1,0 +1,84 @@
+<div class="header">
+     <a routerLink="/slots" class="back">← Back </a>
+    <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+  </div>
+<div class="page-wrapper">
+
+
+
+  <main class="content">
+
+    <div class="page-title">
+      <h1>Booking Summary</h1>
+      <p>Please review your charging session details</p>
+    </div>
+
+  <div class="booking-container">
+
+  <!-- Station -->
+  <section class="card">
+    <h2>Charging Station</h2>
+    <div class="row">
+      <div>
+        <p class="primary">{{ station.name }}</p>
+        <p class="secondary">{{ station.address }}</p>
+      </div>
+      <div class="meta">
+        <span>⭐ {{ station.rating }}</span>
+        <span>🔌 {{ station.connectors }}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slot -->
+  <section class="card">
+    <h2>Slot Details</h2>
+    <div class="grid">
+      <div>
+        <label>Time Slot</label>
+        <p>{{ slot.time }}</p>
+      </div>
+      <div>
+        <label>Duration</label>
+        <p>{{ duration.label }}</p>
+      </div>
+      <div>
+        <label>Base Price</label>
+        <p>₹{{ duration.price }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment -->
+  <section class="card highlight">
+    <h2>Payment Summary</h2>
+
+    <div class="price-row">
+      <span>Charging Cost</span>
+      <span>₹{{ duration.price }}</span>
+    </div>
+
+    <div class="price-row">
+      <span>GST (18%)</span>
+      <span>₹{{ tax }}</span>
+    </div>
+
+    <hr />
+
+    <div class="price-row total">
+      <span>Total Payable</span>
+      <span>₹{{ totalAmount }}</span>
+    </div>
+
+    <button class="primary-btn" (click)="proceedToPayment()">
+      Proceed to Payment
+    </button>
+  </section>
+
+</div>
+
+
+  </main>
+
+
+</div>

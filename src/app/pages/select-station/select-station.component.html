@@ -1,0 +1,44 @@
+<div class="page">
+
+  <!-- HEADER -->
+
+ 
+  <div class="header">
+     <a routerLink="/home" class="back">← Back </a>
+    <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+  </div>
+
+  <h2>Select a Charging Station</h2>
+
+
+  <!-- SEARCH -->
+  <input type="text" class="search" placeholder="Search by station name, city, or address..."
+    [(ngModel)]="searchText" />
+
+  <!-- STATION CARDS -->
+  <div class="card-container">
+    <div class="station-card" *ngFor="let station of filteredStations">
+
+      <div class="rating">
+        ⭐ {{ station.rating }}
+      </div>
+
+      <h3>{{ station.name }}</h3>
+      <p class="address">📍 {{ station.address }}</p>
+
+      <p class="availability">
+        <span class="dot"></span> Available Connectors
+        <span class="count">{{ station.connectors }}</span>
+      </p>
+
+      <p class="desc">{{ station.description }}</p>
+
+      <!-- <button class="btn" routerLink="/slots">Select Station</button> -->
+      <button class="btn" (click)="selectStation(station)">
+        Select Station
+      </button>
+
+    </div>
+  </div>
+
+</div>

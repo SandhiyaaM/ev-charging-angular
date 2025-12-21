@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page {
+  padding: 30px 40px;
+  /* background: #f8fafc; */
+  min-height: 100vh;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color:#ffffff;
+   gap: 2px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.search {
+  width: 60%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 30px;
+  font-size: 14px;
+  
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.station-card {
+  /* background: #ffffff; */
+  border-radius: 14px;
+  padding: 20px;
+  background: linear-gradient(135deg, #020617, #0f766e);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.station-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color:#ffffff;
+}
+
+.address {
+  font-size: 13px;
+  color: #e4e7eb;
+  margin-bottom: 12px;
+}
+.back {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #10b981;
+  text-decoration: none;
+}
+/* .logo {
+  height: 100px;
+} */
+.header {
+  display: flex;
+  justify-content: space-between; /* back on left, logo on right */
+  align-items: center;
+  margin-bottom: rem;
+}
+
+
+.logo {
+  height: 100px; /* adjust as needed */
+}
+
+
+.availability {
+  font-size: 14px;
+  color: #16a34a;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.count {
+  margin-left: auto;
+  background: #22c55e;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #aaaeb5;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #217246;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #059669;
+}

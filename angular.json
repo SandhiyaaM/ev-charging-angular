@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ea1044e6-0299-47fe-9b57-a6f4ce14c6fd"
   }
 }

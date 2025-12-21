@@ -1,0 +1,92 @@
+<div class="header">
+  <a class="back" (click)="goBack()">← Back</a>
+  <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+</div>
+
+<div class="container">
+
+  <h2>Select Your Charging Slot</h2>
+  <p class="subtitle">Choose an available time slot and duration for your EV charging</p>
+
+  <div class="layout">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <!-- Station -->
+      <div class="card station">
+        <h3>{{ stationName }}</h3>
+        <p>📍 {{ stationAddress }}</p>
+        <small>⭐ {{ rating }} | Available Connectors: {{ connectors }}</small>
+      </div>
+
+      <!-- Duration -->
+      <div class="card">
+        <h3>Select Duration</h3>
+        <div class="duration">
+          <button *ngFor="let d of durations" (click)="selectDuration(d)" [class.active]="d === selectedDuration">
+            {{ d.label }}<br />
+            <small>₹{{ d.price }}</small>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slots -->
+      <div class="card">
+        <h3>Available Time Slots</h3>
+
+        <div class="slots">
+          <!-- <button
+            *ngFor="let slot of slots"
+            (click)="selectSlot(slot)"
+            [disabled]="slot.status === 'booked'"
+            [class.available]="slot.status === 'available'"
+            [class.booked]="slot.status === 'booked'"
+            [class.selected]="slot === selectedSlot">
+            {{ slot.time }}
+          </button> -->
+          <button *ngFor="let slot of slots" [disabled]="slot.status === 'booked'" (click)="selectSlot(slot)"
+            [class.available]="slot.status === 'available'" [class.booked]="slot.status === 'booked'"
+            [class.selected]="slot.status === 'selected'">
+
+            {{ slot.time }}
+          </button>
+        </div>
+
+        <div class="legend">
+          <span class="box available"></span> Available
+          <span class="box booked"></span> Booked
+          <span class="box selected"></span> Selected
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="summary">
+      <h3>Booking Summary</h3>
+
+      <p><b>Station</b><br />{{ stationName }}</p>
+      <p><b>Time Slot</b><br />{{ selectedSlot?.time || 'Not selected' }}</p>
+      <p><b>Duration</b><br />{{ selectedDuration.label }}</p>
+
+      <hr />
+
+      <div class="price">
+        <span>₹{{ selectedDuration.price }}</span>
+        <span>₹{{ selectedDuration.price }}</span>
+      </div>
+      <div class="price">
+        <span>Tax (18%)</span>
+        <span>₹{{ tax }}</span>
+      </div>
+
+      <h2>Total ₹{{ total }}</h2>
+
+      <button [disabled]="!selectedSlot" (click)="confirmBooking()">Select a Slot</button>
+
+
+    </div>
+
+  </div>
+</div>

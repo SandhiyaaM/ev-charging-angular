@@ -1,0 +1,101 @@
+<div class="header">
+     <a routerLink="/home" class="back">← Back </a>
+    <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+  </div>
+<div class="page">
+  <!-- Payment -->
+  <section class="payment">
+    <h2> Payment</h2>
+    <p class="sub">Choose your preferred payment method</p>
+
+    <div class="grid">
+
+      <!-- Left: Payment Methods -->
+      <div class="card">
+        <h3> Select Payment Method</h3>
+
+        <div class="pay-option"
+             [class.active]="selectedMethod==='upi'"
+             (click)="selectMethod('upi')">
+          <div class="icon">📱</div>
+          <div>
+            <b>UPI / QR Code</b>
+            <p>Fast & secure UPI payment</p>
+          </div>
+        </div>
+
+        <div class="pay-option"
+             [class.active]="selectedMethod==='card'"
+             (click)="selectMethod('card')">
+          <div class="icon">💳</div>
+          <div>
+            <b>Credit / Debit Card</b>
+            <p>Visa, Mastercard, RuPay</p>
+          </div>
+        </div>
+
+        <div class="pay-option"
+             [class.active]="selectedMethod==='netbanking'"
+             (click)="selectMethod('netbanking')">
+          <div class="icon">🏦</div>
+          <div>
+            <b>Net Banking</b>
+            <p>All major banks supported</p>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn ghost" routerLink="/booking-details">← Back</button>
+          <button class="btn primary" (click)="payNow()">Pay ₹{{ totalAmount }}</button>
+          
+        </div>
+
+        <div class="info">
+          ℹ️ This is a demo payment. No money will be charged.
+        </div>
+      </div>
+
+      <!-- Right: Booking Summary -->
+      <div class="card summary">
+        <h3>📋 Booking Summary</h3>
+
+        <div class="row">
+          <span> Station</span>
+          <b>{{ station.name }}</b>
+        </div>
+
+        <div class="row">
+          <span> Time</span>
+          <b>{{ slot.time }}</b>
+        </div>
+
+        <div class="row">
+          <span> Duration</span>
+          <b>{{ duration.label }}</b>
+        </div>
+
+        <div class="row">
+          <span> Base Price</span>
+          <b>₹{{ subtotal }}</b>
+        </div>
+
+        <div class="row">
+          <span> Taxes (GST)</span>
+          <b>₹{{ tax }}</b>
+        </div>
+
+        <hr>
+
+        <div class="total">
+          <span>Total</span>
+          <span>₹{{ totalAmount }}</span>
+        </div>
+
+        <div class="alert">
+          ⚠️ Please verify all details before proceeding
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

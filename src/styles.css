@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global reset */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Single source of background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617c1, #0d3b37);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font Awesome fix */
+.fa,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+i[class^="fa-"],
+i[class*=" fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}

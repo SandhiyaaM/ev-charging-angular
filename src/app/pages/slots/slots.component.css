@@ -1,0 +1,180 @@
+.container {
+  max-width: 1300px; 
+  margin: auto;
+  /* padding: 20px; */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  
+}
+
+.back {
+  display: block;
+  margin-top: 2px;
+  font-size: 20px;
+  color: #10b981;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+   background: linear-gradient(135deg, #020617, #0f766e);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Station */
+.station {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.station p {
+  margin: 4px 0;
+  color: #c3c8d2;
+  
+}
+
+.badge {
+  background: #22c55e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Duration */
+.duration {
+  display: flex;
+  gap: 12px;
+}
+
+.duration button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+}
+
+.duration button.active {
+  background: #16a34a;
+  color: #fff;
+  border-color: #16a34a;
+}
+
+/* Slots */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.slots button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.available {
+  background: #22c55e;
+  color: white;
+}
+
+.booked {
+  background: #f87171;
+  color: white;
+}
+
+.selected {
+  outline: 3px solid #2563eb;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+  
+}
+
+.box {
+  
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Summary */
+.summary {
+   background: linear-gradient(135deg, #020617, #0f766e);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  
+}
+
+.summary p {
+  color: #f2f8f4;
+}
+.header {
+  display: flex;
+  justify-content: space-between; /* back on left, logo on right */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.logo {
+  height: 100px; /* adjust as needed */
+}
+.back {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #10b981;
+  text-decoration: none;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.summary h2 {
+  margin: 15px 0;
+  color: #22c55e;
+}
+
+.summary button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.summary button:disabled {
+  background: #55575a;
+}

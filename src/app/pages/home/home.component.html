@@ -1,0 +1,206 @@
+<div class="container">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/EV_logo.png" alt="EV Logo" class="logo" />
+
+      <nav class="nav-links">
+        <a class="active">
+
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a>
+          <i class="fa-solid fa-map-location-dot"></i> Stations
+        </a>
+
+        <button class="login-btn" routerLink="/login">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <h1>
+        <i class="fa-solid fa-bolt"></i>
+        Find & Book <span>EV Charging Stations</span>
+      </h1>
+
+      <p>
+        <i class="fa-solid fa-location-crosshairs"></i>
+        Discover nearby charging stations, check real-time availability,
+        and book your slot instantly.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" routerLink="/select-station">
+          <i class="fa-solid fa-magnifying-glass-location"></i>
+          Find Stations
+        </button>
+
+        <button class="secondary-btn" (click)="scrollToMap()">
+          <i class="fa-solid fa-map"></i>
+          View Map
+        </button>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="hero-stats">
+        <div>
+          <i class="fa-solid fa-charging-station"></i>
+          <h3>500+</h3>
+          <span>Stations</span>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-users"></i>
+          <h3>10K+</h3>
+          <span>Users</span>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-clock"></i>
+          <h3>24/7</h3>
+          <span>Available</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SEARCH ================= -->
+  <section class="search-section">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search by station name, city, or address" />
+    </div>
+  </section>
+
+  <!-- ================= MAP ================= -->
+  <!-- <section class="map-section">
+    <h2 class="section-title">
+      <i class="fa-solid fa-map"></i>
+      Charging Stations Map
+    </h2>
+
+    <div id="map" class="map-box"></div>
+  </section> -->
+  <section class="map-section" id="mapSection">
+    <h2 class="section-title">
+      <i class="fa-solid fa-map"></i>
+      Charging Stations Map
+    </h2>
+
+    <div id="map" class="map-box"></div>
+  </section>
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <div class="map-wrapper">
+      <div id="map"></div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- ================= STATIONS ================= -->
+  <section class="stations-section">
+    <h2 class="section-title">
+      <i class="fa-solid fa-location-dot"></i>
+      Nearby Charging Stations
+    </h2>
+
+    <div class="station-grid">
+      <div class="station-card" *ngFor="let station of stations">
+
+        <div class="card-top">
+          <h3>
+            <i class="fa-solid fa-charging-station"></i>
+            {{ station.name }}
+          </h3>
+
+          <span class="status">
+            <i class="fa-solid fa-signal"></i>
+            {{ station.status }}
+          </span>
+        </div>
+
+        <p class="location">
+          <i class="fa-solid fa-location-dot"></i>
+          {{ station.lat }}, {{ station.lng }}
+        </p>
+
+        <div class="card-footer">
+          <span class="price">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            {{ station.price }}/hr
+          </span>
+
+          <button class="book-btn" (click)="bookStation(station)">
+            <i class="fa-solid fa-calendar-check"></i>
+            Book Now
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features">
+    <div class="feature-card">
+      <i class="fa-solid fa-bolt-lightning"></i>
+      <h4>Fast Charging</h4>
+      <p>High-speed DC charging</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <h4>24/7 Available</h4>
+      <p>Charge anytime</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-credit-card"></i>
+      <h4>Easy Payment</h4>
+      <p>UPI, Cards & Wallets</p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div>
+      <h3>EV Charge</h3>
+      <p>Find and book EV charging stations near you.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a>Home</a>
+      <a>Stations</a>
+      <a>About</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a>Help Center</a>
+      <a>Contact</a>
+      <a>FAQ</a>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a>Privacy Policy</a>
+      <a>Terms & Conditions</a>
+    </div>
+  </footer>
+
+</div>
