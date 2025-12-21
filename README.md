@@ -1,27 +1,51 @@
-# EvChargingSystem
+# ⚡ EV Charging Station Booking System (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+A beginner-friendly frontend web application built using **Angular** that allows users to book EV charging slots easily.
 
-## Development server
+## 🚀 Features
+- View EV charging stations
+- Select charging stations
+- Choose available charging slots
+- Booking details page
+- Payment page
+- Booking confirmation page
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠 Tech Stack
+- Angular
+- TypeScript
+- HTML
+- CSS
+## 📸 Screenshots
 
-## Code scaffolding
+### Home Page
+![Home Page](screenshots/home.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Select Station
+![Select Station](screenshots/select-station.png)
 
-## Build
+### Slot Selection
+![Slot Selection](screenshots/slots.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Booking Details
+![Booking Details](screenshots/booking-details.png)
 
-## Running unit tests
+### Payment Page
+![Payment Page](screenshots/payment.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Booking Confirmation
+![Booking Confirmation](screenshots/booking-confirmation.png)
 
-## Running end-to-end tests
+### Login Page
+![Login Page](screenshots/login.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Create Account
+![Create Account](screenshots/create-account.png)
 
-## Further help
+### Downloaded Invoice
+![Downloaded Invoice](screenshots/downloaded_invoice.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## ▶ How to Run the Project
+```bash
+npm install
+ng serve
