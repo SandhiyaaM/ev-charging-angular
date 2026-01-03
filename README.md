@@ -59,3 +59,12 @@ ng serve
 
 
 👩‍💻 Developer: Sandhiyaa M
+
+## Patent Information
+This project is associated with a published patent:
+
+**Title:** E-Vehicle Charging Station  
+**Patent Number:** 202441025073 A  
+
+The patent covers the conceptual framework and system design for efficient EV charging station and slot-based management.
+
